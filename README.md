@@ -1,6 +1,6 @@
-## --------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------
 # REQUIREMENTS
-## --------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------
 # Virgin Atlantic ~ Flight Information Display
 ## Rules
 You can write the application in any language you see fit, bearing in mind that its sole intention is to showcase your
@@ -61,9 +61,9 @@ The [flight data](flights.csv) is a simple comma-separated file containing the f
 
 The ``x`` denotes days that the flight operates. 
 
-## --------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------
 # Solution
-## --------------------------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------
 
 ## Project Description
 
@@ -142,14 +142,14 @@ To start the REST API, we can run below command inside airport-app-rest-api/tage
 - Unit test cases are available under below directory structure 
 
 	|-airport-app-dao
-			-src/test/java			## unit test java code 
+		-src/test/java			## unit test java code 
 	|-airport-app-rest-api 
-			-src/test/java			## unit test java code 
+		-src/test/java			## unit test java code 
 	
 - Postman collection is available to test the APIs under below directory structure 
 
 	|-airport-app-rest-api 
-			-src/int-test			## postman integration tests
+		-src/int-test			## postman integration tests
 
 ## Running the tests:
 
