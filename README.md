@@ -1,6 +1,6 @@
-##----------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------------------------------------
 # REQUIREMENTS
-##----------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------------------------------------
 # Virgin Atlantic ~ Flight Information Display
 ## Rules
 You can write the application in any language you see fit, bearing in mind that its sole intention is to showcase your
@@ -61,11 +61,11 @@ The [flight data](flights.csv) is a simple comma-separated file containing the f
 
 The ``x`` denotes days that the flight operates. 
 
-##----------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------------------------------------
 # Solution
-##----------------------------------------------------------------------------------------------------------------------------
+## ----------------------------------------------------------------------------------------------------------------------------
 
-##Project Description
+## Project Description
 
 This is a Multi-Maven module Project it uses SpringBoot Framework version 2.3.6.RELEASE.
 The Project uses Spring Batch to Read multiple data sources like csv files to load Flight data, And insert into an in memory List Data Structure so that we can serve the data as a REST API.
