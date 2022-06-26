@@ -1,1 +1,6 @@
 .idea/
+*.classpath
+*.factorypath
+.settings/
+airport-app-dao/target/
+airport-app-rest-api/target/

@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "62218b9e-7423-43e9-bee8-aadba8d2b0d2",
+		"name": "Airport-App-Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get flights chronological order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response Status Code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response Must Have Body\", function() {\r",
+							"    pm.response.to.have.body();\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response Must Be Valid\", function() {\r",
+							"    var responseJson = pm.response.json();\r",
+							"    pm.expect(responseJson).to.be.an('array');\r",
+							"    pm.expect(responseJson.length).to.eql(7);\r",
+							"\r",
+							"    pm.expect(responseJson[0].departureTime).to.eql(\"10:15\");\r",
+							"    pm.expect(responseJson[0].destination).to.eql(\"Orlando\");\r",
+							"    pm.expect(responseJson[0].destinationAirportIATA).to.eql(\"MCO\");\r",
+							"    pm.expect(responseJson[0].flightNo).to.eql(\"VS027\");\r",
+							"\r",
+							"    pm.expect(responseJson[1].departureTime).to.eql(\"10:35\");\r",
+							"    pm.expect(responseJson[1].destination).to.eql(\"Las Vegas\");\r",
+							"    pm.expect(responseJson[1].destinationAirportIATA).to.eql(\"LAS\");\r",
+							"    pm.expect(responseJson[1].flightNo).to.eql(\"VS043\");\r",
+							"\r",
+							"    pm.expect(responseJson[2].departureTime).to.eql(\"11:05\");\r",
+							"    pm.expect(responseJson[2].destination).to.eql(\"Barbados\");\r",
+							"    pm.expect(responseJson[2].destinationAirportIATA).to.eql(\"BGI\");\r",
+							"    pm.expect(responseJson[2].flightNo).to.eql(\"VS029\");\r",
+							"\r",
+							"    pm.expect(responseJson[3].departureTime).to.eql(\"11:45\");\r",
+							"    pm.expect(responseJson[3].destination).to.eql(\"Orlando\");\r",
+							"    pm.expect(responseJson[3].destinationAirportIATA).to.eql(\"MCO\");\r",
+							"    pm.expect(responseJson[3].flightNo).to.eql(\"VS049\");\r",
+							"\r",
+							"    pm.expect(responseJson[4].departureTime).to.eql(\"12:25\");\r",
+							"    pm.expect(responseJson[4].destination).to.eql(\"Montego Bay\");\r",
+							"    pm.expect(responseJson[4].destinationAirportIATA).to.eql(\"MBJ\");\r",
+							"    pm.expect(responseJson[4].flightNo).to.eql(\"VS065\");\r",
+							"\r",
+							"    pm.expect(responseJson[5].departureTime).to.eql(\"13:00\");\r",
+							"    pm.expect(responseJson[5].destination).to.eql(\"Orlando\");\r",
+							"    pm.expect(responseJson[5].destinationAirportIATA).to.eql(\"MCO\");\r",
+							"    pm.expect(responseJson[5].flightNo).to.eql(\"VS015\");\r",
+							"\r",
+							"    pm.expect(responseJson[6].departureTime).to.eql(\"15:35\");\r",
+							"    pm.expect(responseJson[6].destination).to.eql(\"Las Vegas\");\r",
+							"    pm.expect(responseJson[6].destinationAirportIATA).to.eql(\"LAS\");\r",
+							"    pm.expect(responseJson[6].flightNo).to.eql(\"VS044\");\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/flights?for=2022-06-29",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flights"
+					],
+					"query": [
+						{
+							"key": "for",
+							"value": "2022-06-29"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
