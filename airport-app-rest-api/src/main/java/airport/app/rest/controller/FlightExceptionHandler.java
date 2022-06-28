@@ -19,7 +19,7 @@ public class FlightExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 
 	@ExceptionHandler(NoFlightAvailableException.class)
-	public final ResponseEntity<ErrorResponseDTO> handleUserNotFoundException(NoFlightAvailableException ex) {
+	public final ResponseEntity<ErrorResponseDTO> handleNoFlightAvailableException(NoFlightAvailableException ex) {
 		ErrorResponseDTO error = new ErrorResponseDTO("No Flight Available");
 		return new ResponseEntity<ErrorResponseDTO>(error, HttpStatus.NOT_FOUND);
 	}
