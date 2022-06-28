@@ -160,6 +160,14 @@ To start the REST API, we can run below command inside airport-app-rest-api/tage
 Below URls can be opened in browser or postman once the app is up and running (to run the app see Running the project section):
 
 	http://localhost:8080/flights?for=2022-06-29
+
+## Screenshots:
+
+Screenshots of API output are available under screenshots directory of this repository
+
+![Postman Test Execution](screenshots/postman_execution.PNG)
+
+![Postman Test Results](screenshots/postman_test_results.PNG)
 	
 ## Desclaimer:
 
